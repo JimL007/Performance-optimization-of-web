@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>媒体查询</title>
+  <style>
+    .box {
+      /* width: 800px; */
+      height: 1000px;
+      text-align: center;
+    }
+
+    /*媒体查询*/
+    @media (max-width:300px) {
+      .header {
+        background-color: red;
+      }
+      .nav {
+        background-color: red;
+      }
+    }
+    /* header（区块） */
+    .header {
+      height: 100px;
+      background-color: paleturquoise;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+    }
+    .nav {
+      height: 50px;
+      width: 100%;
+      background-color: peru;
+    }
+
+    /* main (main区块)*/
+    .main {
+      height: 200px;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .section {
+      background-color: plum;
+      flex: 2 1 auto;
+    }
+
+    .aside {
+      background-color: orange;
+      flex: 1 1 auto;
+    }
+
+    /* footer （footer区块）*/
+    .footer {
+      height: 80px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="header">
+      <p>header</p>
+      <div class="nav">nav</div>
+    </div>
+    <div class="main">
+      <div class="section">section</div>
+      <div class="aside">aside</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+
+</html>
