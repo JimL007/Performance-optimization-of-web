@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>em example</title>
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 62.5%; /*在其他浏览器中该字体大小取值为10px*/
+                        /*但该取值在chrome浏览器无效，因为chrome浏览器最小字体为12px*/
+    }
+
+    .rem {
+      width: 10rem;/*rem 单位基于 根html 元素的字体大小。（font-size:62.5% = 10px）*/
+      height: 10rem;  /*1rem = 10px height = 10*10px=100px */
+      background-color: red;
+    }
+    .em1 {
+      font-size: 20px;/*.em标签有font-size属性明确规定字体大小，字体大小为20px */
+      width: 10em;/* 1em=20px width=10*20=200px */
+      height: 10em;
+      background-color: orange;
+    }
+    .em2 {
+      width: 10em; /*无font-size属性明确规定字体大小，则通过继承方式得到字体大小*/
+                    /*.em2的父级元素为body，body没有规定字体大小，则body默认继承html元素的字体大小*/
+                    /*html元素通过font-size属性确定字体大小为 10px ，因此.em2通过继承得到的字体大小为10px */
+      height: 10em; /*所以 1em=10px height=10*10px=100px */
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rem"></div>
+  <div class="em1">明确字体大小</div>
+  <div class="em2">无明确字体大小</div>
+</body>
+</html>
